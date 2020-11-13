@@ -34,8 +34,10 @@ func _process(delta):
 		$AnimatedSprite.flip_v = velocity.y >0
 	if velocity.x <0:
 		$AnimatedSprite.flip_h = true
+		
 	else:
-		$AnimatedSprite.flip_h = false 
+		$AnimatedSprite.flip_h = false
+		 
 func _on_Player_body_entered(_body):
 	hide()
 	emit_signal("hit")

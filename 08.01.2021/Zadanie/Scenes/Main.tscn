@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Background.jpg" type="Texture" id=1]
+[ext_resource path="res://Scenes/Button.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 536, 304 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" parent="Background" instance=ExtResource( 2 )]
+margin_left = -136.0
+margin_top = -120.0
+margin_right = 160.0
+margin_bottom = -40.0
+focus_neighbour_top = NodePath("../Exit")
+focus_neighbour_bottom = NodePath("../Exit")
+text = "START"
+reference_path = "res://Scenes/New.tscn"
+
+[node name="Exit" parent="Background" instance=ExtResource( 2 )]
+margin_left = -136.0
+margin_top = 80.0
+margin_right = 160.0
+margin_bottom = 160.0
+focus_neighbour_top = NodePath("../Start")
+focus_neighbour_bottom = NodePath("../Start")
+text = "EXIT "
